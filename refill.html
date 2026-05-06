@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Refill</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Machine Refill</h1>
+  <form action="refill.php" method="post" onsubmit="verifRefill()">
+    <div>
+      <label for="refvm">Machine</label>
+      <select id="refvm" name="refvm">
+        <option value="">Sélectionner</option>
+        <option value="1">1) Lycée Pilote (20 rangées)</option>
+        <option value="2">2) Lycée Pilote (Hors Service)</option>
+        <option value="3">3) Université Sousse (10 rangées)</option>
+      </select>
+    </div>
+    <div>
+
+      <label for="refb">Boisson</label>
+      <select id="refb" name="refb">
+        <option value="">Sélectionner</option>
+        <option value="1">Bnino Fraise et Banane</option>
+        <option value="2">Boga Cidre boîte</option>
+        <option value="3">Boga Light boîte</option>
+        <option value="4">Boga Lime boîte</option>
+        <option value="5">Delio Fraise</option>
+        <option value="6">Delio Poire</option>
+        <option value="7">Delio Pomme</option>
+        <option value="8">Florida boîte</option>
+        <option value="9">Marwa Eau 0.5l</option>
+        <option value="10">Oh! Jus</option>
+        <option value="11">Punch Cidre 25cl</option>
+        <option value="12">Punch Orange 25cl</option>
+        <option value="13">Sabrine Pétillante Agrumes 33cl</option>
+        <option value="14">Sabrine Pétillante Pêche 33cl</option>
+        <option value="15">Sabrine Pétillante Pomme 33cl</option>
+        <option value="16">Jus Orange Stil</option>
+        <option value="17">Jus Orange Stil Bouteille 25cl</option>
+        <option value="18">Jus Cocktail Tropico 20cl</option>
+        <option value="19">Viva pêche Bouteille 50cl</option>
+        <option value="20">Safia Bouteille 0.5l</option>
+        <option value="21">Cristalline Bouteille 50cl</option>
+      </select>
+    </div>
+    <div class="row">
+      <div>
+        <label for="numr">Numéro Rangée</label>
+        <input type="number" id="numr" name="numr" min="1">
+      </div>
+      <div>
+        <label for="qte">Quantité</label>
+        <input type="number" id="qte" name="qte" min="1">
+      </div>
+    </div>
+    <div>
+      <label><input type="checkbox" name="force" id="force" value="f"> Forcer le remplacement</label>
+    </div>
+    <div>
+      <button type="submit">Refill!</button>
+    </div>
+  </form>
+</body>
+
+</html>
